@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="author" content="Vic" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Working</title>
+    <link
+      href="https://75thtrombone.com/links/badfavicon.ico"
+      rel="shortcut icon"
+    />
+  </head>
+  <body>
+    <!-- Багованный вариант №1 с srcset: -->
+    <p>
+      <img
+        srcset="
+          ./Pictures/Стандартные_форматы_листов.png  400w,
+          ./Pictures/test.jpg                        560w,
+          ./Pictures/Шаблон_ИУЛа_page-0001.jpg      1242w
+        "
+        sizes="(max-width: 500px) 400px, (max-width: 1920px) 500px, 800px"
+        alt="Error"
+      />
+    </p>
+
+    <!-- Багованный вариант №2 с srcset: -->
+    <p>
+      <img
+        srcset="
+          ./Pictures/Шаблон_ИУЛа_page-0001.jpg,
+          ./Pictures/test.jpg                       2x,
+          ./Pictures/Стандартные_форматы_листов.png 3x
+        "
+        alt="Error"
+      />
+    </p>
+
+    <!-- Багованный вариант №3 с picture: -->
+    <p>
+      <picture>
+        <source
+          sizes="(max-width: 1920px) 200px, (max-width: 2000px) 300px, 300px"
+          srcset="
+            ./Pictures/Стандартные_форматы_листов.png  10w,
+            ./Pictures/test.jpg                       550w,
+            ./Pictures/Шаблон_ИУЛа_page-0001.jpg      600w
+          "
+        />
+        <img src="" alt="Error" />
+      </picture>
+    </p>
+    <!-- Багованный вариант №4 с picture: -->
+    <p>
+      <picture>
+        <source
+          media="(min-width: 2000px)"
+          srcset="
+            ./Pictures/Стандартные_форматы_листов.png 1920w,
+            ./Pictures/test.jpg                       3840w,
+            ./Pictures/Шаблон_ИУЛа_page-0001.jpg      7680w
+          "
+        />
+        <source
+          media="(min-width: 1920px)"
+          srcset="
+            ./Pictures/Стандартные_форматы_листов.png  800w,
+            ./Pictures/test.jpg                       1920w,
+            ./Pictures/Шаблон_ИУЛа_page-0001.jpg      3840w
+          "
+        />
+        <img src="" alt="Error" />
+      </picture>
+    </p>
+  </body>
+</html>
